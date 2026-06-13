@@ -13,30 +13,27 @@ npm install
 npm run dev
 ```
 
-The app will start at `http://localhost:8080`.
-
-## Login Credentials
-
-- **Username:** admin1
-- **Password:** P@ssword_000
-
+The app will start at `http://localhost:8080`
 ---
 
 ## Features and Functionalities
 
 ### 1. Authentication
+
 - Static login page with hardcoded credentials
 - localStorage-based session persistence
 - Protected routes redirect to login when unauthenticated
 - Logout clears session and returns to login
 
 ### 2. Dashboard
+
 - Overview statistics cards (Stocked In, Stocked Out, Suppliers, Customers)
 - Growth/decline percentage indicators
 - Chart placeholder areas for future data visualization
 - Top suppliers list
 
 ### 3. Supplier Management
+
 - Supplier list with search and selection
 - Supplier detail panel (contact info, company, notes)
 - Add/Edit supplier modals
@@ -46,6 +43,7 @@ The app will start at `http://localhost:8080`.
 - Purchase price benchmarking
 
 ### 4. Customer Management
+
 - Customer list with search and selection
 - Customer detail panel (contact info, company, notes)
 - Add/Edit customer modals
@@ -53,6 +51,7 @@ The app will start at `http://localhost:8080`.
 - Statement of Account (SOA) generation
 
 ### 5. Inventory Management
+
 - Product list with search and favorites
 - Product detail panel with unit presets, restock info, and pricing
 - Multi-step add product workflow (Brand > Category > Item > Variant)
@@ -64,6 +63,7 @@ The app will start at `http://localhost:8080`.
 - Deactivate product confirmation
 
 ### 6. Employee Management
+
 - Employee list with search and selection
 - Employee detail panel (role, contact info)
 - Add/Edit employee modals
@@ -71,6 +71,7 @@ The app will start at `http://localhost:8080`.
 - Employee audit log display
 
 ### 7. Invoice Management
+
 - Invoice grid view with status badges (PAID, PENDING, VOIDED)
 - Invoice detail modal with line items
 - New invoice creation workflow with product picker
@@ -79,6 +80,7 @@ The app will start at `http://localhost:8080`.
 - Invoice number generation display
 
 ### 8. Restock Management
+
 - Restock grid view with status badges (COMPLETED, PENDING)
 - Restock detail modal with line items
 - New restock creation workflow with product picker
@@ -88,6 +90,7 @@ The app will start at `http://localhost:8080`.
 - Show all items modal
 
 ### 9. Navigation and Layout
+
 - Fixed sidebar with company branding
 - Main navigation: Dashboard, Restock, Invoice
 - Records navigation: Suppliers, Customers, Inventory, Employees
@@ -96,6 +99,7 @@ The app will start at `http://localhost:8080`.
 - Logout functionality
 
 ### 10. Shared Components
+
 - InfoCard component for list displays
 - SelectedUser component for detail panels
 - NoSelectedState empty state placeholder
@@ -104,6 +108,7 @@ The app will start at `http://localhost:8080`.
 - Toast notifications (Sonner)
 
 ### 11. UI and UX
+
 - Consistent theme with river-green (#00b69b) primary color
 - Custom gray palette for backgrounds and text
 - shadcn/ui component library (new-york style)
