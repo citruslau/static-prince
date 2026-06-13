@@ -8,6 +8,7 @@ import tsConfigPaths from "vite-tsconfig-paths";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
+  base: "/static-prince/",
   plugins: [
     react(),
     tailwindcss(),

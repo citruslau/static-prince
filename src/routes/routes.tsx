@@ -1,4 +1,4 @@
-import { createBrowserRouter, Navigate } from "react-router-dom";
+import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 import LoginPage from "@/pages/login";
 import DashboardPage from "@/pages/admin/dashboard";
 import MainLayout from "@/layouts/main-layout";
@@ -13,68 +13,29 @@ import RestockPage from "@/pages/admin/restock";
 import NewRestockPage from "@/pages/admin/restock/new-restock";
 import PORestockPage from "@/pages/admin/restock/po-restock";
 
-export const router = createBrowserRouter([
-  {
-    element: <DefaultLayout />,
-    children: [
-      {
-        index: true,
-        element: <Navigate to="/login" replace />,
-      },
-      {
-        path: "login",
-        element: <LoginPage />,
-      },
-    ],
-  },
-  {
-    element: <MainLayout />,
-    children: [
-      {
-        path: "admin/",
-        children: [
-          {
-            path: "dashboard",
-            element: <DashboardPage />,
-          },
-          {
-            path: "restock",
-            element: <RestockPage />,
-          },
-          {
-            path: "restock/new",
-            element: <NewRestockPage />,
-          },
-          {
-            path: "restock/po-restock/:poId",
-            element: <PORestockPage />,
-          },
-          {
-            path: "invoice",
-            element: <InvoicePage />,
-          },
-          {
-            path: "invoice/new",
-            element: <NewInvoicePage />,
-          },
-          {
-            path: "suppliers",
-            element: <SuppliersPage />,
-          },
-          {
-            path: "customers",
-            element: <CustomersPage />,
-          },
-          {
-            path: "inventory",
-            element: <InventoryPage />,
-          },
-          {
-            path: "employees",
-            element: <EmployeesPage />,
-          },
-        ],
-      },
-    ],
-  },
-]);
+export default function AppRouter() {
+  return (
+    <HashRouter>
+      <Routes>
+        <Route element={<DefaultLayout />}>
+          <Route index element={<Navigate to="/login" replace />} />
+          <Route path="login" element={<LoginPage />} />
+        </Route>
+        <Route element={<MainLayout />}>
+          <Route path="admin">
+            <Route path="dashboard" element={<DashboardPage />} />
+            <Route path="restock" element={<RestockPage />} />
+            <Route path="restock/new" element={<NewRestockPage />} />
+            <Route path="restock/po-restock/:poId" element={<PORestockPage />} />
+            <Route path="invoice" element={<InvoicePage />} />
+            <Route path="invoice/new" element={<NewInvoicePage />} />
+            <Route path="suppliers" element={<SuppliersPage />} />
+            <Route path="customers" element={<CustomersPage />} />
+            <Route path="inventory" element={<InventoryPage />} />
+            <Route path="employees" element={<EmployeesPage />} />
+          </Route>
+        </Route>
+      </Routes>
+    </HashRouter>
+  );
+}
