@@ -21,45 +21,38 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="flex min-h-screen min-w-screen items-center justify-center bg-custom-bg-white">
-      <div className="w-full max-w-md bg-white rounded-lg shadow-lg p-8">
-        <div className="flex flex-col items-center gap-4 mb-8">
-          <img src="/Company_Logo.svg" alt="Prince" className="w-16 h-16" />
-          <h2 className="text-2xl font-bold text-custom-black">Prince Inventory</h2>
-          <p className="text-sm text-vesper-gray">Educational Supply Inventory System</p>
+    <section className="min-h-screen flex items-center justify-center">
+      <div className="container max-w-md mx-auto p-6 space-y-8">
+        <div className="flex items-center justify-between w-full gap-5">
+          <img src="/Company_Logo.svg" alt="Company Logo" />
+          <h1>Prince Educational Supply</h1>
         </div>
 
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-          <div className="flex flex-col gap-2">
-            <label className="text-sm font-medium text-custom-black">Username</label>
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <div className="flex flex-col space-y-2">
             <input
+              placeholder="Username"
+              id="username"
               type="text"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-              placeholder="Enter your username"
-              className="w-full rounded-lg border border-bellflower-gray bg-white px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-river-green"
             />
-          </div>
-
-          <div className="flex flex-col gap-2">
-            <label className="text-sm font-medium text-custom-black">Password</label>
             <input
               type="password"
+              id="password"
+              placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              placeholder="Enter your password"
-              className="w-full rounded-lg border border-bellflower-gray bg-white px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-river-green"
             />
           </div>
 
-          <button
-            type="submit"
-            className="w-full bg-river-green hover:brightness-105 text-white font-semibold py-3 rounded-lg transition-all duration-200 mt-2"
-          >
-            Login
-          </button>
+          <div className="flex justify-center">
+            <button type="submit" className="w-full max-w-full">
+              login
+            </button>
+          </div>
         </form>
       </div>
-    </div>
+    </section>
   );
 }
