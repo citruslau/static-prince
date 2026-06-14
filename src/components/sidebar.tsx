@@ -41,19 +41,17 @@ export default function Sidebar() {
     }`;
 
   return (
-    <aside className="w-full max-w-[82.5px] h-screen bg-custom-bg-white flex flex-col items-center py-6 border-r border-bellflower-gray">
+    <aside className="w-full max-w-[200px] h-screen bg-custom-bg-white flex flex-col items-center py-6 border-r border-bellflower-gray">
       <div className="flex flex-col items-center gap-1 mb-8">
-        <img src="/Company_Logo.svg" alt="Prince" className="w-10 h-10" />
+        <img src="./Company_Logo.svg" alt="Company Logo" className="w-10 h-10" />
         <span className="text-xs font-bold text-custom-black">Prince</span>
       </div>
 
       <nav className="flex flex-col gap-1 w-full px-2">
-        <span className="text-[10px] font-semibold text-vesper-gray uppercase tracking-wider text-center mb-1">
-          Main
-        </span>
         {mainNav.map((item) => (
           <NavLink key={item.path} to={item.path} className={navLinkClass}>
             <item.icon className="w-5 h-5 shrink-0" />
+            <span>{item.label}</span>
           </NavLink>
         ))}
 
@@ -63,6 +61,7 @@ export default function Sidebar() {
         {recordsNav.map((item) => (
           <NavLink key={item.path} to={item.path} className={navLinkClass}>
             <item.icon className="w-5 h-5 shrink-0" />
+            <span>{item.label}</span>
           </NavLink>
         ))}
       </nav>
