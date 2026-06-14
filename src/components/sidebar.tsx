@@ -69,19 +69,21 @@ export default function Sidebar() {
       <div className="mt-auto flex flex-col items-center gap-2 w-full px-2">
         <button
           onClick={handleLogout}
-          className="w-full flex items-center justify-center gap-2 px-3 py-2 rounded-lg text-sm font-medium text-saltbox-gray hover:bg-white/50 transition-all cursor-pointer max-w-40"
+          className="w-full px-3 py-2 rounded-lg text-sm font-semibold text-white bg-river-green hover:brightness-105 transition-all cursor-pointer"
         >
-          <LogOut className="w-5 h-5" />
+          Logout
         </button>
 
-        <div className="flex flex-col items-center gap-1 bg-white rounded-lg px-3 py-2 w-full border border-bellflower-gray">
-          <div className="w-8 h-8 rounded-full bg-cake-pink flex items-center justify-center text-xs font-bold text-munch-pink">
+        <div className="flex items-center gap-3 bg-white rounded-full px-4 py-3 w-full border border-bellflower-gray">
+          <div className="w-10 h-10 rounded-full bg-cake-pink flex items-center justify-center text-sm font-bold text-munch-pink shrink-0">
             {user?.username?.slice(0, 2).toUpperCase() || "AA"}
           </div>
-          <span className="text-[10px] font-semibold text-custom-black text-center leading-tight">
-            {user?.username || "admin1"}
-          </span>
-          <span className="text-[9px] text-vesper-gray">{user?.role || "Administrator"}</span>
+          <div className="flex flex-col min-w-0">
+            <span className="text-sm font-bold text-custom-black uppercase leading-tight">
+              {user?.username || "admin1"}
+            </span>
+            <span className="text-xs text-vesper-gray capitalize">{user?.role || "Administrator"}</span>
+          </div>
         </div>
       </div>
     </aside>
