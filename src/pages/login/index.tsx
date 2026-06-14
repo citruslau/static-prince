@@ -24,7 +24,7 @@ export default function LoginPage() {
     <section className="min-h-screen flex items-center justify-center">
       <div className="container max-w-md mx-auto p-6 space-y-8">
         <div className="flex items-center justify-between w-full gap-5">
-          <img src="/Company_Logo.svg" alt="Company Logo" />
+          <img src="./Company_Logo.svg" alt="Company Logo" />
           <h1>Prince Educational Supply</h1>
         </div>
 
