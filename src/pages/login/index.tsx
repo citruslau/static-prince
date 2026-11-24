@@ -28,6 +28,10 @@ export default function LoginPage() {
           <h1>Prince Educational Supply</h1>
         </div>
 
+        <p className="text-center text-sm font-medium text-saltbox-gray">
+          Demo Version Only
+        </p>
+
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="flex flex-col space-y-2">
             <input
